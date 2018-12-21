@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.font-10{
+    font-size: 10px;
+}
+.font-15{
+    font-size: 15px;
+}
+.font-20{
+    font-size: 20px;
+}
+.font-25{
+    font-size: 25px;
+}
+.font-30{
+    font-size: 30px;
+}
+.btn-black {
+    background-color: #333333;
+    color: #ffffff;
+}

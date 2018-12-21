@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './core/login/login.component';
+import { PreTripInspectionComponent } from './driver/pre-trip-inspection/pre-trip-inspection.component';
 
 export const routes: Routes = [
-    {path: 'login', component: LoginComponent},
-    {path: '', redirectTo: 'login', pathMatch: 'full'}
+    {path: 'preInspection', component: PreTripInspectionComponent},
+    {path: '', redirectTo: 'preInspection', pathMatch: 'full'}
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRouting { }
+export class AppRouting {
+}
