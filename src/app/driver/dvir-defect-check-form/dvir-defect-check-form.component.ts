@@ -9,6 +9,7 @@ export class DvirDefectCheckFormComponent implements OnInit {
   value: Date;
   public details: any = [];
   public roadSideInspection = false;
+  display = false;
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +28,8 @@ removeEle(index: any) {
 roadSideInspectionReq(flag: boolean) {
   this.roadSideInspection = flag;
   console.log(this.roadSideInspection);
+}
+showDialog() {
+    this.display = true;
 }
 }

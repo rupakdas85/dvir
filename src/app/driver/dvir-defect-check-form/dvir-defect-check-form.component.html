@@ -82,6 +82,12 @@
           <input type="text" class="form-control" value="12435">
         </div>
       </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <span><input type="checkbox"></span>
+          <span class="ml-2">I certify that, to the best of my knowledge, all information above is true as it pertains to the FMCSA regulations in 49 CFR $396.11 Driver Vehicle Inspection Report(s).</span>
+        </div>
+      </div>
       <!-- Driver details -->
       <div class="row mt-5">
         <div class="col-4">
@@ -90,10 +96,7 @@
         </div>
         <div class="col-4">
             <label for="">Date</label>
-            <div class="inner-addon">
-              <i class="fa fa-calendar calender"></i>
-              <input type="text" class="form-control">
-            </div>
+              <p-calendar [(ngModel)]="value"></p-calendar>
           
         </div>
       </div>
@@ -102,7 +105,8 @@
           <div class="col-5">
             <div class="row">
               <div class="col-2"><button class="btn btn-secondary">Cancel</button></div>
-              <div class="col-2"><button class="btn btn-primary">Submit</button></div>
+              <div class="col-2"><button class="btn btn-primary"  (click)="showDialog()">Submit</button></div>
+             
             </div>
           </div>
         </div>
@@ -113,4 +117,8 @@
         <span class="ml-3"><i class="fa fa-comment-o"></i> Support</span>
       </div>
   </div>
+  <p-dialog header="" [(visible)]="display" [blockScroll]="true" [style]="{width: '300px'}">
+     <p>Pending Pre-trip Inspection!</p> 
+     <p> Please complete your inspection Now</p>
+  </p-dialog>
 </div>
