@@ -9,18 +9,3 @@
 }
 
 /* test */
-
-/* enable absolute positioning */
-.inner-addon { 
-    position: relative; 
-}
-/* style icon */
-.inner-addon i {
-  position: absolute;
-    padding: 10px;
-  pointer-events: none;
-}
-/* align icon */
-.inner-addon .vehicleno  { left:  91%;}
-.inner-addon .odometer { left:  85%;}
-.inner-addon .fa-search  { left:  94%;}

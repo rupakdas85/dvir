@@ -1,13 +1,13 @@
 <div class="p-3">
     <div class="row">
-        <div class="col-12">Check any defective items and give details</div>
-        <div class="col-12">
+        <div class="col-12"><strong><i class="fa fa-angle-left font-weight-bold"></i> Check any defective items and give details</strong></div>
+        <div class="col-12 mt-3">
           <span>Current DVIR Status</span>
-          <span>DVIR Required (Defects found)</span>
+          <span class="ml-5 text-danger">DVIR Required (Defects found)</span>
         </div>
-        <div class="col-12">
+        <div class="col-12 mt-1">
           <span>DVIR Tracking Number</span>
-          <span>353688</span>
+          <span class="ml-4">353688</span>
         </div>
       </div>
       <div class="row mt-5">
@@ -29,9 +29,31 @@
                     </select>
                   </div>
                   <div class="col-3">
-                    <span><i class="fa fa-plus"></i></span>
+                    <span><i class="fa fa-plus-circle" style="font-size: 32px" (click)="addMore()"></i></span>
                   </div>
           </div>
+        
+            <div class="row mt-2" *ngFor="let detail of details; let i = index">
+              <div class="col-3">
+                  <select name="" class="form-control" id="">
+                  <option value="">Select</option>
+                  </select>
+                  </div>
+                  <div class="col-3">
+                  <select name="" class="form-control" id="">
+                    <option value="">Select</option>
+                  </select>
+                  </div>
+                  <div class="col-3">
+                    <select name="" class="form-control" id="">
+                      <option value="">Select</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <span><i class="fa fa-minus-circle" style="font-size: 32px"  (click)="removeEle(i)"></i></span>
+                  </div>
+          </div>
+         
         </div>
       </div>
       <!-- Comments -->
@@ -44,6 +66,22 @@
           <textarea name="" id="" rows="3" class="form-control"></textarea>
         </div>
       </div>
+      <div class="row mt-5">
+        <div class="col-12 text-left">
+          Did a State Roadside Inspection Occur?
+        </div>
+        <div class="col-12 text-left">
+         <span><input type="radio" name="occur" id="yes" value="true" (click)="roadSideInspectionReq('true')"> Yes</span>
+         <span class="ml-4"><input type="radio" name="occur" id="no" value="false" (click)="roadSideInspectionReq('false')"> No</span>
+        </div>
+      </div>
+      <div class="row mt-2" *ngIf="roadSideInspection">
+        <div class="col-3">
+          <label for="">Inspection Number (requird)</label>
+          <br>
+          <input type="text" class="form-control" value="12435">
+        </div>
+      </div>
       <!-- Driver details -->
       <div class="row mt-5">
         <div class="col-4">
@@ -52,7 +90,11 @@
         </div>
         <div class="col-4">
             <label for="">Date</label>
-            <input type="text" class="form-control">
+            <div class="inner-addon">
+              <i class="fa fa-calendar calender"></i>
+              <input type="text" class="form-control">
+            </div>
+          
         </div>
       </div>
       <!-- buttons -->
@@ -64,4 +106,11 @@
             </div>
           </div>
         </div>
+          <!-- help and feedback -->
+    <div class="row mt-4 p-4">
+      <div class="col-3">
+        <span><i class="fa fa-question-circle"></i> Help</span>
+        <span class="ml-3"><i class="fa fa-comment-o"></i> Support</span>
+      </div>
+  </div>
 </div>
