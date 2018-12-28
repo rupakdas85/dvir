@@ -13,7 +13,10 @@ export class PreTripInspectionComponent implements OnInit {
 
   ngOnInit() {
   }
-  defectForm() {
-    this.router.navigate(['defectCheck']);
+  preTrip() {
+    this.router.navigate(['driver/preTripInspection']);
+  }
+  postTrip() {
+    this.router.navigate(['driver/postTripInspection']);
   }
 }

@@ -1,0 +1,51 @@
+<div class="pd-6">
+  <div class="row">
+    <div class="col-12">
+      <label for=""><strong>Search By</strong></label>
+      <span class="ml-2"><input type="radio">Driver</span>
+      <span class="ml-2"><input type="radio">Vehicle</span>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col col-8">
+      <label for="">Date Range</label>
+      <br>
+      <p-calendar [(ngModel)]="value"></p-calendar>
+      <span style="margin: 0 17px">to</span>
+      <p-calendar [(ngModel)]="value"></p-calendar>
+      
+    </div>
+    <div class="col col-4">
+        <label for="">State</label>
+        <br>
+        <select name="" class="form-control" id="">
+          <option value="all">All</option>
+        </select>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col col-3">
+        <label for="">State</label>
+        <br>
+        <select name="" class="form-control" id="">
+            <option value="all">All</option>
+          </select>
+    </div>
+    <div class="col col-4">
+        <label for="">Garage Work Center Street Address</label>
+        <br>
+        <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <label for=""><strong>DVIR Defects</strong></label>
+      <span class="ml-3"><input type="radio">Yes</span>
+      <span class="ml-3"><input type="radio">No</span>
+      <span class="ml-3"><input type="radio">Both</span>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <button class="btn btn-black">Cancel</button>
+  </div>
+</div>

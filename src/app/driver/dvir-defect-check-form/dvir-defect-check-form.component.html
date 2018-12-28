@@ -1,4 +1,4 @@
-<div class="p-3">
+<div class="pd-6">
     <div class="row">
         <div class="col-12"><strong><i class="fa fa-angle-left font-weight-bold"></i> Check any defective items and give details</strong></div>
         <div class="col-12 mt-3">
@@ -66,15 +66,6 @@
           <textarea name="" id="" rows="3" class="form-control"></textarea>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-12 text-left">
-          Did a State Roadside Inspection Occur?
-        </div>
-        <div class="col-12 text-left">
-         <span><input type="radio" name="occur" id="yes" value="true" (click)="roadSideInspectionReq('true')"> Yes</span>
-         <span class="ml-4"><input type="radio" name="occur" id="no" value="false" (click)="roadSideInspectionReq('false')"> No</span>
-        </div>
-      </div>
       <div class="row mt-2" *ngIf="roadSideInspection">
         <div class="col-3">
           <label for="">Inspection Number (requird)</label>
@@ -96,7 +87,8 @@
         </div>
         <div class="col-4">
             <label for="">Date</label>
-              <p-calendar [(ngModel)]="value"></p-calendar>
+            <br>
+            <p-calendar [(ngModel)]="value"></p-calendar>
           
         </div>
       </div>
@@ -104,21 +96,29 @@
       <div class="row mt-3">
           <div class="col-5">
             <div class="row">
-              <div class="col-2"><button class="btn btn-secondary">Cancel</button></div>
-              <div class="col-2"><button class="btn btn-primary"  (click)="showDialog()">Submit</button></div>
+              <div class="col-3"><button class="btn btn-secondary" (click)="showDialog('cancel')">Cancel</button></div>
+              <div class="col-2"><button class="btn btn-primary"  (click)="showDialog('submit')">Submit</button></div>
              
             </div>
           </div>
         </div>
           <!-- help and feedback -->
-    <div class="row mt-4 p-4">
+    <div class="row mt-4">
       <div class="col-3">
         <span><i class="fa fa-question-circle"></i> Help</span>
         <span class="ml-3"><i class="fa fa-comment-o"></i> Support</span>
       </div>
   </div>
-  <p-dialog header="" [(visible)]="display" [blockScroll]="true" [style]="{width: '300px'}">
-     <p>Pending Pre-trip Inspection!</p> 
-     <p> Please complete your inspection Now</p>
-  </p-dialog>
+
 </div>
+  <!-- if cancel -->
+  <p-dialog header="" [(visible)]="cancelMsg" [blockScroll]="true" [style]="{width: '300px'}">
+    <p>Pending <strong>Pre-trip Inspection!</strong></p> 
+    <p> Please complete your inspection Now</p>
+ </p-dialog>
+
+   <!-- if submit -->
+   <p-dialog header="" [(visible)]="successMsg" [blockScroll]="true" [style]="{width: '300px'}">
+    <p>Pending <strong>Post-trip Inspection!</strong></p> 
+    <p> Please complete your inspection Now</p>
+ </p-dialog>
