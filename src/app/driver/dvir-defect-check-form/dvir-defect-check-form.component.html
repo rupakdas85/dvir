@@ -1,4 +1,4 @@
-<div class="p-3">
+<div class="pd-6">
     <div class="row">
         <div class="col-12"><strong><i class="fa fa-angle-left font-weight-bold"></i> Check any defective items and give details</strong></div>
         <div class="col-12 mt-3">
@@ -66,20 +66,17 @@
           <textarea name="" id="" rows="3" class="form-control"></textarea>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-12 text-left">
-          Did a State Roadside Inspection Occur?
-        </div>
-        <div class="col-12 text-left">
-         <span><input type="radio" name="occur" id="yes" value="true" (click)="roadSideInspectionReq('true')"> Yes</span>
-         <span class="ml-4"><input type="radio" name="occur" id="no" value="false" (click)="roadSideInspectionReq('false')"> No</span>
-        </div>
-      </div>
       <div class="row mt-2" *ngIf="roadSideInspection">
         <div class="col-3">
           <label for="">Inspection Number (requird)</label>
           <br>
           <input type="text" class="form-control" value="12435">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <span><input type="checkbox"></span>
+          <span class="ml-2">I certify that, to the best of my knowledge, all information above is true as it pertains to the FMCSA regulations in 49 CFR $396.11 Driver Vehicle Inspection Report(s).</span>
         </div>
       </div>
       <!-- Driver details -->
@@ -90,10 +87,8 @@
         </div>
         <div class="col-4">
             <label for="">Date</label>
-            <div class="inner-addon">
-              <i class="fa fa-calendar calender"></i>
-              <input type="text" class="form-control">
-            </div>
+            <br>
+            <p-calendar [(ngModel)]="value"></p-calendar>
           
         </div>
       </div>
@@ -101,16 +96,29 @@
       <div class="row mt-3">
           <div class="col-5">
             <div class="row">
-              <div class="col-2"><button class="btn btn-secondary">Cancel</button></div>
-              <div class="col-2"><button class="btn btn-primary">Submit</button></div>
+              <div class="col-3"><button class="btn btn-secondary" (click)="showDialog('cancel')">Cancel</button></div>
+              <div class="col-2"><button class="btn btn-primary"  (click)="showDialog('submit')">Submit</button></div>
+             
             </div>
           </div>
         </div>
           <!-- help and feedback -->
-    <div class="row mt-4 p-4">
+    <div class="row mt-4">
       <div class="col-3">
         <span><i class="fa fa-question-circle"></i> Help</span>
         <span class="ml-3"><i class="fa fa-comment-o"></i> Support</span>
       </div>
   </div>
+
 </div>
+  <!-- if cancel -->
+  <p-dialog header="" [(visible)]="cancelMsg" [blockScroll]="true" [style]="{width: '300px'}">
+    <p>Pending <strong>Pre-trip Inspection!</strong></p> 
+    <p> Please complete your inspection Now</p>
+ </p-dialog>
+
+   <!-- if submit -->
+   <p-dialog header="" [(visible)]="successMsg" [blockScroll]="true" [style]="{width: '300px'}">
+    <p>Pending <strong>Post-trip Inspection!</strong></p> 
+    <p> Please complete your inspection Now</p>
+ </p-dialog>

@@ -1,0 +1,115 @@
+<div class="grey-bg pd-6">
+      <div class="row">
+          <div class="col-12">
+            <label for=""><strong>Search By</strong></label>
+            <span class="ml-2"><input type="radio" name="searchBy" value="driver"> Driver</span>
+            <span class="ml-2"><input type="radio" name="searchBy" value="vehicle"> Vehicle</span>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col col-8">
+            <label for="">Date Range</label>
+            <br>
+            <p-calendar [(ngModel)]="value"></p-calendar>
+            <span style="margin: 0 17px">to</span>
+            <p-calendar [(ngModel)]="value"></p-calendar>
+            
+          </div>
+          <div class="col col-4">
+              <label for="">State</label>
+              <br>
+              <select name="" class="form-control" id="">
+                <option value="all">All</option>
+              </select>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col col-3">
+              <label for="">State</label>
+              <br>
+              <select name="" class="form-control" id="">
+                  <option value="all">All</option>
+                </select>
+          </div>
+          <div class="col col-4">
+              <label for="">Garage Work Center Street Address</label>
+              <br>
+              <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label for=""><strong>DVIR Defects</strong></label>
+            <span class="ml-3"><input type="radio" name="dvirdefect"> Yes</span>
+            <span class="ml-3"><input type="radio" name="dvirdefect"> No</span>
+            <span class="ml-3"><input type="radio" name="dvirdefect"> Both</span>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-black">Search</button>
+        </div>
+  </div>
+<div class="mt-3 pd-6">
+    <div class="row" style=" border-bottom: 1px solid #cccccc">
+        <div class="col-8">
+            <h4>Vehicle Information</h4>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-3 text-right" style="padding: 9px 0">
+              <i class="fa fa-car fa-2x"></i>
+            </div>
+            <div class="col-9">
+              <div class="mt-2">
+                Assigned Vehicle
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Table header-->
+      <div class="row grey-bg p-3 font-bold">
+          <div class="col-4">
+              DVIR ID/ Number
+          </div>
+          <div class="col-8">
+              Reporting Driver’s Name/ Enterprise ID
+          </div>
+      </div>
+      <div class="row font-15" style="border-bottom: 1px solid #cccccc; padding: 2% 0">
+        <div class="col-4">
+          <span>10221</span>
+        </div>
+        <div class="col-4">
+          <span>No DVIR Required</span>
+        </div>
+        
+      </div>
+
+      <div class="row font-15" style="border-bottom: 1px solid #cccccc; padding: 2% 0">
+          <div class="col-4">
+            <span>10221</span>
+          </div>
+          <div class="col-4">
+            <span>No DVIR Required</span>
+          </div>
+          
+        </div>
+
+        <div class="row font-15" style="border-bottom: 1px solid #cccccc; padding: 2% 0">
+            <div class="col-4">
+              <span>10221</span>
+            </div>
+            <div class="col-4">
+              <span>No DVIR Required</span>
+            </div>
+            
+          </div>
+       <!-- help and feedback -->
+       <div class="row mt-4">
+          <div class="col-3">
+            <span><i class="fa fa-question-circle"></i> Help</span>
+            <span class="ml-3"><i class="fa fa-comment-o"></i> Support</span>
+          </div>
+      </div>  
+</div>

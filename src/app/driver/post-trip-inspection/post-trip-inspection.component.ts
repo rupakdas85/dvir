@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dvir-defect-check-form',
-  templateUrl: './dvir-defect-check-form.component.html',
-  styleUrls: ['./dvir-defect-check-form.component.css']
+  selector: 'app-post-trip-inspection',
+  templateUrl: './post-trip-inspection.component.html',
+  styleUrls: ['./post-trip-inspection.component.css']
 })
-export class DvirDefectCheckFormComponent implements OnInit {
+export class PostTripInspectionComponent implements OnInit {
+
   value: Date;
   public details: any = [];
   public roadSideInspection = false;
@@ -42,4 +43,5 @@ showDialog(action: any) {
         break;
     }
 }
+
 }
